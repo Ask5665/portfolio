@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ankit | Full-Stack Java Developer & AI/IoT</title>
+  <meta name="description" content="Ankit – Full-Stack Java Developer with AI & IoT experience. Projects: Smart ECG AI, Web apps, and IoT systems." />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root{--bg1:#0f1724;--accent1:#42b7ff;--accent2:#a855f7}
+    html{scroll-behavior:smooth}
+    body{font-family:Outfit,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;}
+    .grad-bg{position:fixed;inset:0;background:linear-gradient(120deg,var(--accent1),var(--accent2));filter:blur(60px);opacity:.12;z-index:-1;animation:shift 12s ease-in-out infinite}
+    @keyframes shift{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8%) rotate(30deg)}100%{transform:translateY(0) rotate(0deg)}}
+    .card{background:rgba(15,23,36,0.6);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.06)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.show{opacity:1;transform:none}
+    /* mobile menu slide */
+    .mobile-menu { position: fixed; top: 0; right: 0; height: 100%; width: 75%; max-width: 320px; background: rgba(6,8,15,0.95); backdrop-filter: blur(8px); transform: translateX(100%); transition: transform .28s ease; z-index: 60; padding: 1.25rem; }
+    .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="bg-[#071026] text-slate-100">
+  <div class="grad-bg"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 bg-gradient-to-b from-black/50 to-transparent backdrop-blur border-b border-white/6">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-black/40 flex items-center justify-center ring-1 ring-white/6">
+          <i data-lucide="zap" class="w-5 h-5 text-brand-300"></i>
+        </div>
+        <span class="font-semibold">Ankit</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-brand-300">About</a>
+        <a href="#skills" class="hover:text-brand-300">Skills</a>
+        <a href="#projects" class="hover:text-brand-300">Projects</a>
+        <a href="#experience" class="hover:text-brand-300">Experience</a>
+        <a href="#certs" class="hover:text-brand-300">Certifications</a>
+        <a href="#contact" class="hover:text-brand-300">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/Ask5665" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-md card hover:scale-[1.02] transition"> <i data-lucide="github" class="w-4 h-4"></i> <span class="text-xs">GitHub</span></a>
+        <a href="https://www.linkedin.com/in/ankit-kamanalli-36565527a/" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-md card hover:scale-[1.02] transition"> <i data-lucide="linkedin" class="w-4 h-4"></i> <span class="text-xs">LinkedIn</span></a>
+        <a href="./Ankit_Resume1.pdf" download class="ml-2 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-brand-500 text-slate-900 font-semibold">Resume</a>
+        <button id="mobileMenuBtn" aria-label="Open menu" class="md:hidden p-2 ml-1 rounded-md card"><i data-lucide="menu" class="w-5 h-5"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (slide-over) -->
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-md bg-black/40 flex items-center justify-center ring-1 ring-white/6">
+          <i data-lucide="zap" class="w-5 h-5 text-brand-300"></i>
+        </div>
+        <span class="font-semibold">Ankit</span>
+      </div>
+      <button id="closeMobileMenu" aria-label="Close menu" class="p-2 rounded-md card"><i data-lucide="x" class="w-5 h-5"></i></button>
+    </div>
+    <nav class="flex flex-col gap-4 text-lg">
+      <a href="#about" class="py-2">About</a>
+      <a href="#skills" class="py-2">Skills</a>
+      <a href="#projects" class="py-2">Projects</a>
+      <a href="#experience" class="py-2">Experience</a>
+      <a href="#certs" class="py-2">Certifications</a>
+      <a href="#contact" class="py-2">Contact</a>
+    </nav>
+    <div class="mt-6 border-t border-white/6 pt-4">
+      <a href="https://github.com/Ask5665" target="_blank" class="flex items-center gap-2 py-2"><i data-lucide="github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/ankit-kamanalli-36565527a/" target="_blank" class="flex items-center gap-2 py-2"><i data-lucide="linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" class="pt-14 pb-10">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <p class="text-xs text-brand-200 uppercase tracking-widest">Full-Stack Java Developer • AI & IoT</p>
+        <h1 class="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-[#a855f7]">Ankit</span>
+        </h1>
+        <p class="mt-4 text-slate-300 max-w-xl">I build scalable web applications and AI-driven systems. Recent work includes an AI-powered ECG platform, IoT solutions, and responsive full-stack apps. Seeking opportunities to deliver production-grade software.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-brand-500 text-slate-900 font-semibold"><i data-lucide="rocket"></i> View Projects</a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/6"><i data-lucide="send"></i> Contact</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-sm">
+          <a href="mailto:ankitkamanalli230@gmail.com" class="flex items-center gap-2"> <i data-lucide="mail" class="w-4 h-4"></i> ankitkamanalli230@gmail.com</a>
+          <span class="text-muted">•</span>
+          <a href="tel:+919019537322" class="flex items-center gap-2"> <i data-lucide="phone" class="w-4 h-4"></i> +91 90195 37322</a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="card rounded-2xl p-6">
+          <h3 class="font-semibold flex items-center gap-2"><i data-lucide="user"></i> Summary</h3>
+          <p class="mt-3 text-sm text-slate-300">Full Stack Java Developer skilled in Java, web technologies, and AI solutions, with experience in end-to-end application development and real-time data systems. Proficient in building scalable web applications and data-driven systems.</p>
+          <ul class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-300">
+            <li><strong>Location:</strong> Kalaburagi, Karnataka</li>
+            <li><strong>Education:</strong> B.E. ECE (2021–2025)</li>
+            <li><strong>CGPA:</strong> 7.23</li>
+            <li><strong>Available:</strong> Immediately</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-12 border-t border-white/6">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <h2 class="text-2xl font-bold reveal flex items-center gap-2"><i data-lucide="layers"></i> Skills</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card rounded-xl p-4 reveal">
+          <h4 class="font-semibold flex items-center gap-2"><i data-lucide="code-2"></i> Languages</h4>
+          <p class="text-sm mt-2 flex flex-wrap gap-3 items-center">
+            <span class="flex items-center gap-2"><i class="devicon-java-plain colored text-xl"></i> Java</span>
+            <span class="flex items-center gap-2"><i class="devicon-html5-plain colored text-xl"></i> HTML5</span>
+            <span class="flex items-center gap-2"><i class="devicon-css3-plain colored text-xl"></i> CSS3</span>
+            <span class="flex items-center gap-2"><i class="devicon-python-plain colored text-xl"></i> Python</span>
+          </p>
+        </div>
+        <div class="card rounded-xl p-4 reveal">
+          <h4 class="font-semibold flex items-center gap-2"><i data-lucide="wrench"></i> Tools</h4>
+          <p class="text-sm mt-2 flex flex-wrap gap-3 items-center">
+            <span class="flex items-center gap-2"><i class="devicon-vscode-plain colored text-xl"></i> VS Code</span>
+            <span class="flex items-center gap-2"><i class="devicon-eclipse-plain colored text-xl"></i> Eclipse</span>
+            <span class="flex items-center gap-2"><i class="devicon-git-plain colored text-xl"></i> Git</span>
+            <span class="flex items-center gap-2"><i class="devicon-github-original colored text-xl"></i> GitHub</span>
+          </p>
+        </div>
+        <div class="card rounded-xl p-4 reveal">
+          <h4 class="font-semibold flex items-center gap-2"><i data-lucide="monitor"></i> Frontend</h4>
+          <p class="text-sm mt-2">Responsive UI, DOM manipulation, Flexbox/Grid</p>
+        </div>
+        <div class="card rounded-xl p-4 reveal">
+          <h4 class="font-semibold flex items-center gap-2"><i data-lucide="cpu"></i> Domains</h4>
+          <p class="text-sm mt-2">ECG/AI, IoT (ESP32/Arduino), Web Apps</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-12">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <h2 class="text-2xl font-bold reveal flex items-center gap-2"><i data-lucide="folder"></i> Featured Projects</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <article class="card p-5 rounded-xl reveal hover:scale-[1.01] transition-transform">
+          <h3 class="font-semibold flex items-center gap-2"><i data-lucide="activity"></i> Smart ECG Analysis & Heart Condition Detection</h3>
+          <p class="text-sm mt-2">An AI-powered ECG analysis platform using 2-lead & 12-lead data. Implemented a 13-layer CNN + 2-layer LSTM, applied preprocessing (bandpass filtering, DC offset removal), and achieved ~73% classification accuracy. Designed for real-time insights and remote health monitoring. Components: data preprocessing (PTB-XL), R-peak detection, beat-type classification, RR-interval logic and segment-level condition labelling.</p>
+          <div class="mt-3 text-xs flex gap-2 flex-wrap">
+            <span class="px-2 py-1 rounded bg-white/5">Python</span>
+            <span class="px-2 py-1 rounded bg-white/5">CNN-LSTM</span>
+            <span class="px-2 py-1 rounded bg-white/5">Signal Processing</span>
+          </div>
+        </article>
+
+        <article class="card p-5 rounded-xl reveal hover:scale-[1.01] transition-transform">
+          <h3 class="font-semibold flex items-center gap-2"><i data-lucide="globe"></i> Simple Travel Agency Website</h3>
+          <p class="text-sm mt-2">A responsive and clean travel agency website built using HTML5 & CSS3. Includes an interactive homepage, services and destinations, booking/contact form, and optimized navigation for mobile and desktop. Focus: accessibility and performance.</p>
+          <div class="mt-3 text-xs flex gap-2"><span class="px-2 py-1 rounded bg-white/5">HTML5</span><span class="px-2 py-1 rounded bg-white/5">CSS3</span></div>
+        </article>
+
+        <article class="card p-5 rounded-xl reveal md:col-span-2 hover:scale-[1.01] transition-transform">
+          <h3 class="font-semibold flex items-center gap-2"><i data-lucide="cpu"></i> Weather Reporting System (IoT)</h3>
+          <p class="text-sm mt-2">A real-time IoT system using Arduino and ESP32 microcontrollers. Collects temperature, humidity, and pressure data from sensors and streams them to a cloud dashboard with live monitoring and alerts. Implemented MQTT/HTTP data transport and a lightweight dashboard for visualization and notifications.</p>
+          <div class="mt-3 text-xs flex gap-2"><span class="px-2 py-1 rounded bg-white/5">Arduino</span><span class="px-2 py-1 rounded bg-white/5">ESP32</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-12 border-t border-white/6">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <h2 class="text-2xl font-bold reveal flex items-center gap-2"><i data-lucide="briefcase"></i> Experience</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div class="card p-4 rounded-xl reveal">
+          <h4 class="font-semibold flex items-center gap-2"><i data-lucide="book"></i> Full Stack Java Trainee – TAP Academy</h4>
+          <p class="text-sm mt-1">Jul 2024 – Present. Training from core to advanced Java, Spring, REST APIs, DB integration. Hands-on projects and code reviews to produce production-ready applications.</p>
+        </div>
+        <div class="card p-4 rounded-xl reveal">
+          <h4 class="font-semibold flex items-center gap-2"><i data-lucide="settings"></i> IoT Development Intern – GTTC</h4>
+          <p class="text-sm mt-1">Nov 2023 – Jan 2024. Developed Smart Parking Lot & Line-Following Robot with Arduino/PLC. Integrated ESP32 with cloud services for telemetry and control.</p>
+        </div>
+        <div class="card p-4 rounded-xl reveal">
+          <h4 class="font-semibold flex items-center gap-2"><i data-lucide="share-2"></i> Content & Social Media Intern – Chamberly</h4>
+          <p class="text-sm mt-1">May 2024 – Jul 2024. Designed visuals, planned campaigns, and increased engagement by ~30% through targeted content strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTS -->
+  <section id="certs" class="py-12">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-6">
+      <div class="card p-5 rounded-xl reveal">
+        <h4 class="font-semibold flex items-center gap-2"><i data-lucide="graduation-cap"></i> Education</h4>
+        <p class="text-sm mt-2">B.E – Electronics & Communication Engineering, Poojya Doddappa Appa College (2021–2025). CGPA: 7.23</p>
+      </div>
+      <div class="card p-5 rounded-xl reveal">
+        <h4 class="font-semibold flex items-center gap-2"><i data-lucide="award"></i> Certifications & Achievements</h4>
+        <ul class="mt-3 text-sm space-y-2 list-disc list-inside">
+          <li>48th Series SPP Project Exhibition – Selected & Presented for ECG AI</li>
+          <li>PLC, Automation, IoT – GTTC</li>
+          <li>Innovation by Design – NPTEL</li>
+          <li>Social Media Content Creation – Chamberly</li>
+          <li>Built 10+ projects across Java, AI, IoT, and Web</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12 border-t border-white/6">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-8 items-start">
+      <div class="reveal">
+        <h2 class="text-2xl font-bold flex items-center gap-2"><i data-lucide="message-circle"></i> Get in touch</h2>
+        <p class="mt-3 text-slate-300">Have a role, project, or idea? I reply within 24 hours. Prefer email? Mail me directly or use the form.</p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li class="flex items-center gap-2"><i data-lucide="mail"></i><a href="mailto:ankitkamanalli230@gmail.com" class="underline">ankitkamanalli230@gmail.com</a></li>
+          <li class="flex items-center gap-2"><i data-lucide="phone"></i><a href="tel:+919019537322" class="underline">+91 90195 37322</a></li>
+          <li class="flex items-center gap-2"><i data-lucide="github"></i><a href="https://github.com/Ask5665" target="_blank" class="underline">github.com/Ask5665</a></li>
+          <li class="flex items-center gap-2"><i data-lucide="linkedin"></i><a href="https://www.linkedin.com/in/ankit-kamanalli-36565527a/" target="_blank" class="underline">linkedin.com/in/ankit-kamanalli</a></li>
+        </ul>
+      </div>
+
+      <form id="contactForm" class="card p-5 rounded-xl reveal space-y-3">
+        <div class="p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-blue-200">This form sends messages directly to my email. I'll respond within 24 hours.</div>
+        <div>
+          <label class="block text-sm mb-1">Name</label>
+          <input name="user_name" required class="w-full rounded-md bg-transparent border border-white/6 px-3 py-2" placeholder="Your name" />
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Email</label>
+          <input name="user_email" type="email" required class="w-full rounded-md bg-transparent border border-white/6 px-3 py-2" placeholder="you@example.com" />
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Message</label>
+          <textarea name="message" rows="5" required class="w-full rounded-md bg-transparent border border-white/6 px-3 py-2" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="submitBtn" type="submit" class="rounded-md bg-brand-500 text-slate-900 px-4 py-2 font-semibold">Send Message</button>
+          <div id="formMessage" class="text-sm"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-8 mt-8 text-center text-sm text-slate-400 border-t border-white/6">
+    <div class="flex justify-center gap-4 mb-3">
+      <a href="https://github.com/Ask5665" target="_blank" class="hover:text-brand-300"><i data-lucide="github"></i></a>
+      <a href="https://www.linkedin.com/in/ankit-kamanalli-36565527a/" target="_blank" class="hover:text-brand-300"><i data-lucide="linkedin"></i></a>
+    </div>
+    <div>© <span id="year"></span> Ankit. All rights reserved.</div>
+  </footer>
+
+  <!-- EmailJS & Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS (public key)
+    emailjs.init('4x4T71lDIWAKiyFpd');
+
+    // Icons, year, reveal, mobile menu, and EmailJS form handling
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) lucide.createIcons();
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Intersection reveal
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            e.target.classList.add('show');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: .15 });
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+      // Mobile menu
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+      function openMobile() { mobileMenu.classList.add('open'); mobileMenu.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
+      function closeMobile() { mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
+
+      mobileMenuBtn?.addEventListener('click', openMobile);
+      closeMobileMenu?.addEventListener('click', closeMobile);
+      // Close on link click
+      mobileMenu.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', closeMobile));
+
+      // Contact form
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const formMessage = document.getElementById('formMessage');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        formMessage.textContent = '';
+
+        emailjs.sendForm('service_i3qup1l', 'template_9vfw18m', '#contactForm')
+          .then(() => {
+            formMessage.textContent = '✅ Message sent successfully!';
+            formMessage.className = 'text-green-400';
+            form.reset();
+          })
+          .catch((err) => {
+            console.error('EmailJS error:', err);
+            formMessage.textContent = '❌ Failed to send. Please try again later.';
+            formMessage.className = 'text-red-400';
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          });
+      });
+    });
+  </script>
+</body>
+</html>
