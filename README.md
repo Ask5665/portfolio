@@ -1,6 +1,6 @@
 # 🌐 Ankit’s Developer Portfolio  
 
-![Portfolio Preview](./screenshot.png) <!-- Replace with actual screenshot if available -->
+
 
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.0-blue)](https://tailwindcss.com/)  
 [![Lucide Icons](https://img.shields.io/badge/Icons-LUCIDE-orange)](https://lucide.dev/)  
@@ -31,5 +31,5 @@ This repository contains my **personal portfolio website**, a modern and fully r
 ## 🚀 Deployment
 1. Clone the repo:  
    ```bash
-   git clone https://github.com/Ask5665/portfolio.git
+   git clone [https://github.com/Ask5665/portfolio.git](https://ask5665.github.io/portfolio/)
    cd portfolio
