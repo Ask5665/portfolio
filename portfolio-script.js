@@ -107,13 +107,13 @@ const fadeInObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '0';
             entry.target.style.transform = 'translateY(30px)';
-            
+
             setTimeout(() => {
                 entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }, 100);
-            
+
             fadeInObserver.unobserve(entry.target);
         }
     });
@@ -165,13 +165,13 @@ contactForm.addEventListener('submit', async (e) => {
     try {
         // For demonstration purposes, we'll just show a success message
         // In production, you would send this to a backend API
-        
+
         showFormMessage('Thank you for your message! I will get back to you soon.', 'success');
         contactForm.reset();
-        
+
         // Log the form data (in production, this would be sent to a server)
         console.log('Form submitted:', data);
-        
+
     } catch (error) {
         showFormMessage('Oops! Something went wrong. Please try again.', 'error');
     }
@@ -180,7 +180,7 @@ contactForm.addEventListener('submit', async (e) => {
 function showFormMessage(message, type) {
     formMessage.textContent = message;
     formMessage.className = `form-message ${type}`;
-    
+
     setTimeout(() => {
         formMessage.className = 'form-message';
     }, 5000);
@@ -214,18 +214,12 @@ const downloadCVBtn = document.getElementById('downloadCV');
 
 downloadCVBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    
-    // Show a message indicating CV download functionality
-    // In production, this would link to an actual PDF file
-    alert('CV download functionality will be available soon. Please contact me directly at ankitkamanalli230@gmail.com for my resume.');
-    
-    // In production, you would use:
-    // window.location.href = 'path/to/your/cv.pdf';
-    // or
-    // const link = document.createElement('a');
-    // link.href = 'path/to/your/cv.pdf';
-    // link.download = 'Ankit_Kamanalli_CV.pdf';
-    // link.click();
+
+    // Create a temporary link element and trigger download
+    const link = document.createElement('a');
+    link.href = 'Ankit_Kamanalli_Resume.pdf';
+    link.download = 'Ankit_Kamanalli_Resume.pdf';
+    link.click();
 });
 
 // === SMOOTH SCROLLING FOR ALL ANCHOR LINKS ===
@@ -233,7 +227,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80;
             window.scrollTo({
